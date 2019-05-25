@@ -1,0 +1,11 @@
+div{
+  height: 100px;
+}
+.r{
+  width: 50%;
+}
+
+img{
+  max-height: 500%;
+  max-width: 500%;
+}

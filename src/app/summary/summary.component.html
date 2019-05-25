@@ -1,0 +1,40 @@
+<div class="center">
+  <div class="card text-center">
+    <div class="card-header" *ngIf="userName">
+      <strong>Quiz Summary - {{userName}}</strong>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Your Score is: {{score}}</h5>
+      <p class="card-text">Thank You For Playing My Quiz!</p>
+      <a href="#" class="btn btn-primary" routerLink="/Quiz">Play Again</a>
+    </div>
+    <div class="card-footer text-muted">
+    </div>
+  </div>
+  <br>
+  <h2 *ngIf="userAnswers">Answers Review:</h2>
+  <table class="table table-striped" *ngIf="userAnswers">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Question</th>
+      <th scope="col">Answer</th>
+      <th scope="col">Your Answer</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let and of questions; let i = index">
+      <th scope="row">{{and.id}}</th>
+      <td>{{and?.description}}</td>
+      <td>{{and?.rightAnswer}}</td>
+      <td *ngIf="userAnswers[i];else NoAnswer" [ngStyle]="{'color': userAnswers[i] === and?.rightAnswer ? 'green' : 'red'}">
+          <strong>{{userAnswers[i]}}</strong>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <ng-template #NoAnswer>
+    <h5 style="color: red">No Answer!</h5>
+  </ng-template>
+</div>
+

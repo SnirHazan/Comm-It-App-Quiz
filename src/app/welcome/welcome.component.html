@@ -1,0 +1,29 @@
+<div class="row">
+  <!--Form group - user details-->
+  <div class="col-xl-5 r">
+    <div class="container">
+      <h1>Welcome To My Quiz!</h1>
+      <form class="form-group">
+        <h3>Please Enter Your Details:</h3>
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" class="form-control" id="fullName" placeholder="Your Full Name" #First required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Your Email" #Email [required]="true">
+          <small class="form-text text-muted">We'll never share your name or email with anyone else.</small>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="onStart(First.value,Email.value)">Start Quiz</button>
+      </form>
+      <p><strong>** For More Information - Click "Info" Tab **</strong></p>
+    </div>
+  </div>
+<!--Welcome Image-->
+  <div class="col-xl-5 r">
+    <img src="../../assets/image/welcome-quiz.png">
+  </div>
+</div>
+
+
+

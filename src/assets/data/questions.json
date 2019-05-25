@@ -1,0 +1,12 @@
+[
+  {"id":"1","description":"What is the capital city of Israel?","optionalanswers":["Tel-Aviv","Jerusalem","Haifa","Beer-Sheva"],"rightAnswer":"Jerusalem"},
+  {"id":"2","description":"What is the capital city of Egypt?","optionalanswers":["Alexandria","Dairut","El-Arish","Cairo"],"rightAnswer":"Cairo"},
+  {"id":"3","description":"What is the capital city of England?","optionalanswers":["Liverpool","London","Manchester","Derby"],"rightAnswer":"London"},
+  {"id":"4","description":"What is the capital city of Italy?","optionalanswers":["Milano","Rome","Napoli","Torino"],"rightAnswer":"Rome"},
+  {"id":"5","description":"What is the capital city of Ethiopia?","optionalanswers":["Bahir Dar","Addis Ababa","Gondar","Ambo"],"rightAnswer":"Addis Ababa"},
+  {"id":"6","description":"What is the capital city of Australia?","optionalanswers":["Melbourne","Sydney","Gold Coast","Canberra"],"rightAnswer":"Canberra"},
+  {"id":"7","description":"What is the capital city of Morocco?","optionalanswers":["Agadir","Rabat","Marrakesh","Casablanca"],"rightAnswer":"Rabat"},
+  {"id":"8","description":"What is the capital city of Philippines?","optionalanswers":["Puerto Princesa","Palayan","Manila","Antipolo"],"rightAnswer":"Manila"},
+  {"id":"9","description":"What is the capital city of Saudi Arabia?","optionalanswers":["Medina","Mecca","Taif","Riyadh"],"rightAnswer":"Riyadh"},
+  {"id":"10","description":"What is the capital city of Belgium?","optionalanswers":["Antwerpen","Brussels","Genk","Mechelen"],"rightAnswer":"Brussels"}
+]

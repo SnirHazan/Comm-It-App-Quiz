@@ -1,0 +1,33 @@
+<div class="specialDiv shadow-lg p-3 mb-5 bg-white rounded" style="margin: 0 auto; background:royalblue !important;  border-radius: 25px;">
+  <h2 class="display-4">Question <span *ngIf="questions">{{currentIndexQuestion+1}}/{{questions?.length}}</span></h2>
+  <div class="container">
+    <h3>{{currentQuestion?.description}}</h3>
+    <div class="form-check answers" *ngFor='let ans of currentQuestion?.optionalanswers; let i = index' #Answers>
+      <mat-radio-button color="warn"  class="radio" [checked]="userAnswers[currentIndexQuestion] === ans" (change)="answerWasChosen(i)">
+        {{ans}}
+      </mat-radio-button>
+    </div>
+  </div>
+  <hr class="my-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <button class="btn btn-light left" (click)="onPrev(next.id)" [disabled]="currentIndexQuestion===0 || finish" #prev>Prev</button>
+      </div>
+      <div class="col-md-6"><span class="pull-right">
+        <button class="btn btn-light right" id="next" (click)="onNext(next.id)" [disabled]="finish" #next>Next</button>
+      </span>
+      </div>
+    </div>
+  </div>
+  <p class="lead">
+
+  </p>
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar"
+         aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width: progressBarIndex*10 + '%'}">
+      {{progressBarIndex*10}}%
+    </div>
+  </div>
+</div>
+<mat-spinner *ngIf="isLoading"  color="primary"></mat-spinner>
