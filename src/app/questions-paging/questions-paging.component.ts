@@ -36,6 +36,10 @@ export class QuestionsPagingComponent implements OnInit {
       });
   }
 
+  /**
+   * This function called when Next button was clicked.
+   * @param id - the id of the Next button.
+   */
   async onNext(id) {
     if (this.selectedAnswer !== '') {
       this.userAnswers[this.currentIndexQuestion] = this.selectedAnswer;
@@ -59,6 +63,9 @@ export class QuestionsPagingComponent implements OnInit {
       this.router.navigate(['/Summary'], {queryParams: {Score: score, Name: this.userDataSer.getFullName()}});
     }
   }
+  /**
+   * This function calculate the score of the player.
+   */
   calculteScore() {
     let score = 0;
     for (const key in this.userAnswers) {
@@ -68,10 +75,12 @@ export class QuestionsPagingComponent implements OnInit {
           }
       }
     }
-    console.log(score);
     return score;
   }
-
+  /**
+   * This function called when Prev button was clicked.
+   * @param id - the id of the Next buttons.
+   */
   onPrev(id) {
     document.getElementById(id).innerHTML = 'Next';
     if (this.currentIndexQuestion > 0) {
