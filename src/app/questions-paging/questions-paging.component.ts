@@ -1,5 +1,5 @@
 import {Component, ElementRef, OnInit, QueryList, ViewChildren} from '@angular/core';
-import {Question} from '../question/question.modal';
+import {Question} from './question.modal';
 import {Router} from '@angular/router';
 import {QuestionService} from '../question.service';
 import {UserDataService} from '../user-data.service';

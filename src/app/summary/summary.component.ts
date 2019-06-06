@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {UserDataService} from '../user-data.service';
 import {QuestionService} from '../question.service';
-import {Question} from '../question/question.modal';
+import { Question } from '../questions-paging/question.modal';
 
 
 @Component({
